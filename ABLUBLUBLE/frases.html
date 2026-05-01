@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>grande chigiri</title>
+    <link rel="icon" href="cellbit em choque.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-color: #ff00ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Comic Sans MS', sans-serif;
+            overflow: hidden;
+        }
+
+        .botao-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+
+        .balao {
+            background: white;
+            border: 4px solid black;
+            border-radius: 40px;
+            padding: 20px;
+            width: 300px;
+            position: relative;
+            margin-bottom: 30px;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .balao:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            border-width: 20px 20px 0;
+            border-style: solid;
+            border-color: white transparent;
+            display: block;
+            width: 0;
+            transform: translateX(-50%);
+        }
+
+        .personagem-img {
+            width: 350px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="botao-home">
+        <img src="casa.png" alt="Voltar" style="width: 80px; cursor: pointer;">
+    </a>
+
+    <div class="container">
+        <div class="balao" id="texto-balao">...</div>
+        <img src="Chigiri_Hyoma.png" class="personagem-img">
+    </div>
+
+    <script>
+        const frases = [
+            "feliz aniversário, minha querida namorada Sandrine",
+            "pabens",
+            "oi sou eu o Chigiri seu namorado",
+            "sandrine, te amo",
+            "sandrine",
+            "olá, namorada",
+            "ai chega n quero mais ngm so quero sandrine",
+            "oii amor",
+            "oii namorada",
+            "FLAMENGO"
+        ];
+
+        const fraseSorteada = frases[Math.floor(Math.random() * frases.length)];
+        document.getElementById('texto-balao').innerText = fraseSorteada;
+    </script>
+</body>
+</html>

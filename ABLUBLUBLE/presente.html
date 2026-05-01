@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>PRESENTE</title>
+    <link rel="icon" href="cellbit em choque.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-color: #66ff00;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Comic Sans MS', sans-serif;
+        }
+
+        .botao-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            transition: transform 0.3s;
+            z-index: 20;
+        }
+
+        .botao-home:hover {
+            transform: scale(1.2) rotate(-5deg);
+        }
+
+        .imagem-topo {
+            width: 600px;
+            margin-bottom: 200px;
+        }
+
+        #botaoFugitivo {
+            padding: 20px 40px;
+            font-size: 25px;
+            background-color: #ff8800;
+            color: black;
+            border: 5px outset #fff;
+            cursor: pointer;
+            position: relative;
+            font-weight: bold;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="botao-home">
+        <img src="casa.png" alt="Voltar" style="width: 80px; cursor: pointer;">
+    </a>
+
+    <img src="SANDIE ME AMA EBAAAAA.png" class="imagem-topo">
+
+    <button id="botaoFugitivo">RESGATAR PRESENTE</button>
+
+    <script>
+        const botao = document.getElementById('botaoFugitivo');
+        let fugas = 0;
+        const limiteFugas = 5;
+
+        botao.addEventListener('mouseover', function() {
+            if (fugas < limiteFugas) {
+                const x = Math.random() * (window.innerWidth - botao.offsetWidth);
+                const y = Math.random() * (window.innerHeight - botao.offsetHeight);
+                
+                botao.style.position = 'absolute';
+                botao.style.left = x + 'px';
+                botao.style.top = y + 'px';
+                
+                fugas++;
+                
+                if(fugas == 1) botao.innerText = "OTÁRIA";
+                if(fugas == 3) botao.innerText = "ERROOOOOUU";
+                if(fugas == 5) botao.innerText = "tabao... resgatar presente";
+            }
+        });
+
+        botao.addEventListener('click', function() {
+            if (fugas >= limiteFugas) {
+                window.open("https://youtu.be/Dun2HpOf3Y0?si=VbROy2NBhuo3uWYy", "_blank"); 
+            }
+        });
+    </script>
+</body>
+</html>

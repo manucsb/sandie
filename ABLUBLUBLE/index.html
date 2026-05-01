@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PABENS</title>
+    <link rel="icon" href="cellbit em choque.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-color: #9500b3;
+            color: yellow;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .titulo-hk {
+            width: 600px;
+            max-width: 90%;
+            margin-bottom: 20px;
+        }
+
+        @keyframes flash {
+            from { opacity: 1; filter: brightness(1); }
+            to { opacity: 0.7; filter: brightness(1.5); }
+        }
+
+        .girar {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            animation: rodar 2s linear infinite;
+        }
+
+        @keyframes rodar {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .botao-lateral {
+            position: absolute;
+            bottom: 60px;
+            z-index: 10;
+            transition: transform 0.2s;
+        }
+
+        .botao-topo {
+            position: absolute;
+            bottom: 350px; 
+            z-index: 10;
+            transition: transform 0.2s;
+        }
+
+        .botao-lateral:hover, .botao-topo:hover {
+            transform: scale(1.1);
+        }
+
+        .lado-direito {
+            right: 20px;
+        }
+
+        .lado-esquerdo {
+            left: 20px;
+        }
+
+        .marquee {
+            width: 100%;
+            background: blue;
+            color: white;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="FELIZ ANIVERSÁRIOsandrine.png" alt="FELIZ ANIVERSÁRIO" class="titulo-hk">
+
+    <img src="sunoo foto grande imagem.jpg" alt="Aniversariante" class="girar">
+
+    <a href="https://youtu.be/0ZC4Ult7W_U" target="_blank" class="botao-topo lado-esquerdo">
+        <img src="harumaki.png" alt="Link Especial" style="width: 150px; cursor: pointer;">
+    </a>
+
+    <a href="frases.html" class="botao-topo lado-direito">
+        <img src="chigiri.png" alt="Frases" style="width: 150px; cursor: pointer;">
+    </a>
+
+    <a href="https://forms.gle/2GaMP2DaW7zK8cJz5" target="_blank" class="botao-lateral lado-esquerdo">
+        <img src="nicodiangelo.png" alt="Quiz" style="width: 150px; cursor: pointer;">
+    </a>
+
+
+    <a href="presente.html" class="botao-lateral lado-direito">
+        <img src="presente.png" alt="Clique aqui" style="width: 150px; cursor: pointer;">
+    </a>
+
+    <div class="marquee">
+        <marquee scrollamount="15">HOJE VAI SER UMA FESTA BOLO E GARAMA MUITO DOCE PRA VOCÊ É O SEU ANIVERSÁRIO VAMOS FESTEJAR OS AMIGOS RECEBER MIL FELICIDADES E AMOR NO CORAÇÃO QUE A SUA VIDA SEJA SEMPRE DOCE E EMOÇÃO BATE BATE PALMA QUE É HORA DE CANTAR AGORA TODOS JUNTOS VAMOS LÁ PARABÉNS PARABÉNS HOJE É O SEU DIA QUE DIA MAIS FELIZ PARABÉNS PARABÉNS CANTE NOVAMENTE QUE A GENTE PEDE BIS</marquee>
+    </div>
+
+</body>
+</html>
